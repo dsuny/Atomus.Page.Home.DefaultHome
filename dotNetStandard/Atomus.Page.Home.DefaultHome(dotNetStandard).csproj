@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Atomus</RootNamespace>
+    <AssemblyName>Atomus.Page.Home.DefaultHome</AssemblyName>
+    <Authors>DSUN</Authors>
+    <Company>Atomus</Company>
+    <Product>Atomus Framework in .Net Standard 2.0</Product>
+    <Description>Atomus Framework in .Net Standard 2.0</Description>
+    <Copyright>Copyright 2020. DSUN all rights reserved.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/dsuny/Atomus.Page.Home.DefaultHome</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dsuny/Atomus.Page.Home.DefaultHome</RepositoryUrl>
+    <PackageIcon>atomus.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Atomus Atomus.Core Home DefaultHome AtomusFramework</PackageTags>
+    <PackageReleaseNotes>release 1.0.0</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Atomus.Core.dotNetStandard" Version="1.0.2.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DefaultHome.xaml.cs">
+      <DependentUpon>DefaultHome.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="DefaultHome.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DefaultHomeStandard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Include="..\..\image\atomus.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
